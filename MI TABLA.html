@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tabla periodica de Sam</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .COMO{background-color:rgb(203, 227, 255);width:270px;height:130px;text-align: center;}
+        .COMO:hover{background-color:rgb(241, 246, 252);width:270px;height:130px;text-align: center;}
+        #T{position: absolute; right:580px}
+        .noclasific{background-color:rgb(255, 166, 83);width:90px;height:90px;text-align: center;}
+        .noclasific:hover{background-color:rgb(250, 121, 0);width:90px;height:90px;text-align: center;}
+        #H{position: absolute; left:2px; top: 50px}
+        .metalc{background-color:rgb(255, 77, 121);width:90px;height:90px;text-align: center;}
+        .metalc:hover{background-color:rgb(255, 0, 64);width:90px;height:90px;text-align: center;}
+        #Li{position: absolute; left:2px; top: 240px}
+        #Na{position: absolute; left:2px; top: 335px}
+        #K{position: absolute; left:2px; top: 430px}
+        #Rb{position: absolute; left:2px; top: 525px}
+        #Cs{position: absolute; left:2px; top: 620px}
+        #Fr{position: absolute; left:2px; top: 715px}
+        .metalcterr{background-color:rgb(255, 77, 121);width:90px;height:90px;text-align: center;}
+        .metalcterr:hover{background-color:rgb(255, 0, 64);width:90px;height:90px;text-align: center;}
+        #Be{position: absolute; left:97px; top: 240px}
+        #Mg{position: absolute; left:97px; top: 335px}
+        #Ca{position: absolute; left:97px; top: 430px}
+        #Sr{position: absolute; left:97px; top: 525px}
+        #Ba{position: absolute; left:97px; top: 620px}
+        #Ra{position: absolute; left:97px; top: 715px}
+        .mettran{background-color:rgb(234, 255, 112);width:90px;height:90px;text-align: center;}
+        .mettran:hover{background-color:rgb(214, 252, 0);width:90px;height:90px;text-align: center;}
+        #Sc{position: absolute; left:192px; top: 430px}
+        #Y{position: absolute; left:192px; top: 525px}
+        #Ti{position: absolute; left:287px; top: 430px}
+        #Zr{position: absolute; left:287px; top: 525px}
+        #Hf{position: absolute; left:287px; top: 620px}
+        #Rf{position: absolute; left:287px; top: 715px}
+        #V{position: absolute; left:382px; top: 430px}
+        #Nb{position: absolute; left:382px; top: 525px}
+        #Ta{position: absolute; left:382px; top: 620px}
+        #Db{position: absolute; left:382px; top: 715px}
+        #Cr{position: absolute; left:477px; top: 430px}
+        #Mo{position: absolute; left:477px; top: 525px}
+        #W{position: absolute; left:477px; top: 620px}
+        #Sg{position: absolute; left:477px; top:715px}
+        #Mn{position: absolute; left:572px; top:430px}
+        #Tc{position: absolute; left:572px; top:525px}
+        #Re{position: absolute; left:572px; top:620px}
+        #Bh{position: absolute; left:572px; top:715px}
+        #Fe{position: absolute; left:667px; top:430px}
+        #Ru{position: absolute; left:667px; top:525px}
+        #Os{position: absolute; left:667px; top:620px}
+        #Hs{position: absolute; left:667px; top:715px}
+        #Co{position: absolute; left:762px; top:430px}
+        #Rh{position: absolute; left:762px; top:525px}
+        #Ir{position: absolute; left:762px; top:620px}
+        #Mt{position: absolute; left:762px; top:715px}
+        #Ni{position: absolute; left:857px; top:430px}
+        #Pd{position: absolute; left:857px; top:525px}
+        #Pt{position: absolute; left:857px; top:620px}
+        #Ds{position: absolute; left:857px; top:715px}
+        #Cu{position: absolute; left:952px; top:430px}
+        #Ag{position: absolute; left:952px; top:525px}
+        #Au{position: absolute; left:952px; top:620px}
+        #Rg{position: absolute; left:952px; top:715px}
+        #Zn{position: absolute; left:1047px; top:430px}
+        #Cd{position: absolute; left:1047px; top:525px}
+        #Hg{position: absolute; left:1047px; top:620px}
+        #Cn{position: absolute; left:1047px; top:715px}
+        .boro{background-color:rgb(222, 112, 255);width:90px;height:90px;text-align: center;}
+        .boro:hover{background-color:rgb(195, 0, 255);width:90px;height:90px;text-align: center;}
+        #B{position: absolute; left:1142px; top:240px}
+        #Al{position: absolute; left:1142px; top:335px}
+        #Ga{position: absolute; left:1142px; top:430px}
+        #In{position: absolute; left:1142px; top:525px}
+        #Tl{position: absolute; left:1142px; top:620px}
+        #Nh{position: absolute; left:1142px; top:715px}
+        .Carb{background-color:rgb(132, 252, 128);width:90px;height:90px;text-align: center;}
+        .Carb:hover{background-color:rgb(9, 255, 0);width:90px;height:90px;text-align: center;}
+        #C{position: absolute; left:1237px; top:240px}
+        #Si{position: absolute; left:1237px; top:335px}
+        #Ge{position: absolute; left:1237px; top:430px}
+        #Sn{position: absolute; left:1237px; top:525px}
+        #Pb{position: absolute; left:1237px; top:620px}
+        #Fl{position: absolute; left:1237px; top:715px}
+        #N{position: absolute; left:1332px; top:240px}
+        #P{position: absolute; left:1332px; top:335px}
+        #As{position: absolute; left:1332px; top:430px}
+        #Sb{position: absolute; left:1332px; top:525px}
+        #Bi{position: absolute; left:1332px; top:620px}
+        #Mc{position: absolute; left:1332px; top:715px}
+        #O{position: absolute; left:1427px; top:240px}
+        #S{position: absolute; left:1427px; top:335px}
+        #Se{position: absolute; left:1427px; top:430px}
+        #Te{position: absolute; left:1427px; top:525px}
+        #Po{position: absolute; left:1427px; top:620px}
+        #Lv{position: absolute; left:1427px; top:715px}
+        #F{position: absolute; left:1522px; top:240px}
+        #Cl{position: absolute; left:1522px; top:335px}
+        #Br{position: absolute; left:1522px; top:430px}
+        #I{position: absolute; left:1522px; top:525px}
+        #At{position: absolute; left:1522px; top:620px}
+        #Ts{position: absolute; left:1522px; top:715px}
+        .gasn{background-color:rgb(204, 204, 204);width:90px;height:90px;text-align: center;}
+        .gasn:hover{background-color:rgb(151, 151, 151);width:90px;height:90px;text-align: center;}
+        #He{position: absolute; left:1617px; top:145px}
+        #Ne{position: absolute; left:1617px; top:240px}
+        #Ar{position: absolute; left:1617px; top:335px}
+        #Kr{position: absolute; left:1617px; top:430px}
+        #Xe{position: absolute; left:1617px; top:525px}
+        #Rn{position: absolute; left:1617px; top:620px}
+        #Og{position: absolute; left:1617px; top:715px}
+        .lan{background-color:rgb(128, 223, 252);width:90px;height:90px;text-align: center;}
+        .lan:hover{background-color:rgb(0, 195, 255);width:90px;height:90px;text-align: center;}
+        #La-Lu{position: absolute; left:192px; top: 620px}
+        #La{position: absolute; left:287px; top: 905px}
+        #Ce{position: absolute; left:382px; top: 905px}
+        #Pr{position: absolute; left:477px; top: 905px}
+        #Nd{position: absolute; left:572px; top: 905px}
+        #Pm{position: absolute; left:667px; top: 905px}
+        #Sm{position: absolute; left:762px; top: 905px}
+        #Eu{position: absolute; left:857px; top: 905px}
+        #Gd{position: absolute; left:952px; top: 905px}
+        #Tb{position: absolute; left:1047px; top: 905px}
+        #Dy{position: absolute; left:1142px; top: 905px}
+        #Ho{position: absolute; left:1237px; top: 905px}
+        #Er{position: absolute; left:1332px; top: 905px}
+        #Tm{position: absolute; left:1427px; top: 905px}
+        #Yb{position: absolute; left:1522px; top: 905px}
+        #Lu{position: absolute; left:1617px; top: 905px}
+        .Act{background-color:rgb(147, 128, 252);width:90px;height:90px;text-align: center;}
+        .Act:hover{background-color:rgb(38, 0, 255);width:90px;height:90px;text-align: center;}
+        #Ac-Lr{position: absolute; left:192px; top: 715px}
+        #Ac{position: absolute; left:287px; top: 1002px}
+        #Th{position: absolute; left:382px; top: 1002px}
+        #Pa{position: absolute; left:477px; top: 1002px}
+        #U{position: absolute; left:572px; top: 1002px}
+        #Np{position: absolute; left:667px; top: 1002px}
+        #Pu{position: absolute; left:762px; top: 1002px}
+        #Am{position: absolute; left:857px; top: 1002px}
+        #Cm{position: absolute; left:952px; top: 1002px}
+        #Bk{position: absolute; left:1047px; top: 1002px}
+        #Cf{position: absolute; left:1142px; top: 1002px}
+        #Es{position: absolute; left:1237px; top: 1002px}
+        #Fm{position: absolute; left:1332px; top: 1002px}
+        #Md{position: absolute; left:1427px; top: 1002px}
+        #No{position: absolute; left:1522px; top: 1002px}
+        #Lr{position: absolute; left:1617px; top: 1002px}
+    </style>
+</head>
+<body>
+    <button class="COMO" id="T" type="button" onclick="alert(' Presiona sobre el elemento del que quieras obtener la siguiente informacion                                                                                                                         ~NUM. ATOMICO---NOMBRE---MASA ATOMICA---NUM DE OXIDACION---GRUPO~ ')">
+        <H1>TABLA DE SAM</H1>
+        <BR>
+        <H3>Instrucciones</H3>
+    </button>
+    <button class="noclasific" id="H" type="button" onclick="alert(' ~1---Hidrogeno---1.00794---+1, -1---no tiene un grupo~ ')">
+        <H1>H</H1>
+        <H5>Hidrogeno</H5>
+    </button>
+    <button class="metalc" id="Li" type="button" onclick="alert(' ~3---Litio---6.941---+1---Metales alcalinos~ ')">
+        <H1>Li</H1>
+        <H5>Litio</H5>
+    </button>
+    <button class="metalc" id="Na" type="button" onclick="alert(' ~11---Sodio---22.98977---+1---Metales alcalinos~ ')">
+        <H1>Na</H1>
+        <H5>Sodio</H5>
+    </button>
+    <button class="metalc" id="K" type="button" onclick="alert(' ~19---Potasio---39.0983---+1---Metales alcalinos~ ')">
+        <H1>K</H1>
+        <H5>Potasio</H5>
+    </button>
+    <button class="metalc" id="Rb" type="button" onclick="alert(' ~37---Rubidio---85.4678---+1---Metales alcalinos~ ')">
+        <H1>Rb</H1>
+        <H5>Rubidio</H5>
+    </button>
+    <button class="metalc" id="Cs" type="button" onclick="alert(' ~55---Cesio---132.9054---+1---Metales alcalinos~ ')">
+        <H1>Cs</H1>
+        <H5>Cesio</H5>
+    </button>
+    <button class="metalc" id="Fr" type="button" onclick="alert(' ~87---Francio---(223)---(solo se conocen isotopos inestables)---Metales alcalinos~ ')">
+        <H1>Fr</H1>
+        <H5>Francio</H5>
+    </button>
+    <button class="metalcterr" id="Be" type="button" onclick="alert(' ~4---Berilio---9.012182---2---metales alcalinoterrreos~ ')">
+        <H1>Be</H1>
+        <H5>Berilio</H5>
+    </button>
+    <button class="metalcterr" id="Mg" type="button" onclick="alert(' ~12---Magnesio---24.305---2---metales alcalinoterrreos~ ')">
+        <H1>Mg</H1>
+        <H5>Magnesio</H5>
+    </button>
+    <button class="metalcterr" id="Ca" type="button" onclick="alert(' ~20---Calcio---40.078---2---metales alcalinoterrreos~ ')">
+        <H1>Ca</H1>
+        <H5>Calcio</H5>
+    </button>
+    <button class="metalcterr" id="Sr" type="button" onclick="alert(' ~38---Estroncio---87.62---2---metales alcalinoterrreos~ ')">
+        <H1>Sr</H1>
+        <H5>Estroncio</H5>
+    </button>
+    <button class="metalcterr" id="Ba" type="button" onclick="alert(' ~56---Bario---137.327---2---metales alcalinoterrreos~ ')">
+        <H1>Ba</H1>
+        <H5>Bario</H5>
+    </button>
+    <button class="metalcterr" id="Ra" type="button" onclick="alert(' ~88---Radio---(226)---2---metales alcalinoterrreos~ ')">
+        <H1>Ra</H1>
+        <H5>Radio</H5>
+    </button>
+    <button class="mettran" id="Sc" type="button" onclick="alert(' ~21---Escandio---44.95591---3---metales de transicion~ ')">
+        <H1>Sc</H1>
+        <H5>Escandio</H5>
+    </button>
+    <button class="mettran" id="Y" type="button" onclick="alert(' ~39---Itrio---88.90585---3---metales de transicion~ ')">
+        <H1>Y</H1>
+        <H5>Itrio</H5>
+    </button>
+    <button class="mettran" id="Ti" type="button" onclick="alert(' ~22---Titanio---47.867---2, 3, 4---metales de transicion~ ')">
+        <H1>Ti</H1>
+        <H5>Titanio</H5>
+    </button>
+    <button class="mettran" id="Zr" type="button" onclick="alert(' ~40---Zirconio---91.224---2, 3, 4---metales de transicion~ ')">
+        <H1>Zr</H1>
+        <H5>Zirconio</H5>
+    </button>
+    <button class="mettran" id="Hf" type="button" onclick="alert(' ~72---Hafnio---178.49---4---metales de transicion~ ')">
+        <H1>Hf</H1>
+        <H5>Hafnio</H5>
+    </button>
+    <button class="mettran" id="Rf" type="button" onclick="alert(' ~104---Rutherfodio---(261.1088)---se conocen solo isotopos inestables---metales de transicion~ ')">
+        <H1>Rf</H1>
+        <H5>Rutherfodio</H5>
+    </button>
+    <button class="mettran" id="V" type="button" onclick="alert(' ~23---Vanadio---50.9415---2, 3, 4, 5---metales de transicion~ ')">
+        <H1>V</H1>
+        <H5>Vanadio</H5>
+    </button>
+    <button class="mettran" id="Nb" type="button" onclick="alert(' ~41---Niobio---92.90638---2, 3, 4, 5---metales de transicion~ ')">
+        <H1>Nb</H1>
+        <H5>Niobio</H5>
+    </button>
+    <button class="mettran" id="Ta" type="button" onclick="alert(' ~73---Tantalio---180.9479---2, 3, 4, 5---metales de transicion~ ')">
+        <H1>Ta</H1>
+        <H5>Tantalio</H5>
+    </button>
+    <button class="mettran" id="Db" type="button" onclick="alert(' ~105---Dubnio---(262.141)---Solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Db</H1>
+        <H5>Dubnio</H5>
+    </button>
+    <button class="mettran" id="Cr" type="button" onclick="alert(' ~24---Cromo---51.9961---2, 3, 4, 5, 6---metales de transicion~ ')">
+        <H1>Cr</H1>
+        <H5>Cromo</H5>
+    </button>
+    <button class="mettran" id="Mo" type="button" onclick="alert(' ~42---Molibdeno---95.94---2, 3, 4, 5, 6---metales de transicion~ ')">
+        <H1>Mo</H1>
+        <H5>Molibdeno</H5>
+    </button>
+    <button class="mettran" id="W" type="button" onclick="alert(' ~74---Tungsteno---183.84---2, 3, 4, 5, 6---metales de transicion~ ')">
+        <H1>W</H1>
+        <H5>Tungsteno</H5>
+    </button>
+    <button class="mettran" id="Sg" type="button" onclick="alert(' ~106---Seaborgio---(266.1219)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Sg</H1>
+        <H5>Seaborgio</H5>
+    </button>
+    <button class="mettran" id="Mn" type="button" onclick="alert(' ~25---Manganeso---54.93804---2, 3, 4, 5, 6, 7---metales de transicion~ ')">
+        <H1>Mn</H1>
+        <H5>Manganeso</H5>
+    </button>
+    <button class="mettran" id="Tc" type="button" onclick="alert(' ~43---Tecnecio---(97.9072)---4, 5, 6, 7---metales de transicion~ ')">
+        <H1>Tc</H1>
+        <H5>Tecnecio</H5>
+    </button>
+    <button class="mettran" id="Re" type="button" onclick="alert(' ~75---Renio---186.207---2, 3, 4, 5, 6, 7---metales de transicion~ ')">
+        <H1>Re</H1>
+        <H5>Renio</H5>
+    </button>
+    <button class="mettran" id="Bh" type="button" onclick="alert(' ~107---Bohrio---(264.12)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Bh</H1>
+        <H5>Bohrio</H5>
+    </button>
+    <button class="mettran" id="Fe" type="button" onclick="alert(' ~26---Hierro---55.845---2, 3, 4---metales de transicion~ ')">
+        <H1>Fe</H1>
+        <H5>Hierro</H5>
+    </button>
+    <button class="mettran" id="Ru" type="button" onclick="alert(' ~44---Rutenio---101.07---2, 3, 4, 5, 6, 8---metales de transicion~ ')">
+        <H1>Ru</H1>
+        <H5>Rutenio</H5>
+    </button>
+    <button class="mettran" id="Os" type="button" onclick="alert(' ~76---Osmio---190.23---2, 3, 4, 5, 6, 7, 8---metales de transicion~ ')">
+        <H1>Os</H1>
+        <H5>Osmio</H5>
+    </button>
+    <button class="mettran" id="Hs" type="button" onclick="alert(' ~108---Hassio---(277)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Hs</H1>
+        <H5>Hassio</H5>
+    </button>
+    <button class="mettran" id="Co" type="button" onclick="alert(' ~27---Cobalto---58.6934---2, 3, 4---metales de transicion~ ')">
+        <H1>Co</H1>
+        <H5>Cobalto</H5>
+    </button>
+    <button class="mettran" id="Rh" type="button" onclick="alert(' ~45---Rodio---102.9055---2, 3, 4, 5, 6---metales de transicion~ ')">
+        <H1>Rh</H1>
+        <H5>Rodio</H5>
+    </button>
+    <button class="mettran" id="Ir" type="button" onclick="alert(' ~77---Iridio---192.217---2, 3, 4, 6---metales de transicion~ ')">
+        <H1>Ir</H1>
+        <H5>Iridio</H5>
+    </button>
+    <button class="mettran" id="Mt" type="button" onclick="alert(' ~109---Meitnerio---(268.1388)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Mt</H1>
+        <H5>Meitnerio</H5>
+    </button>
+    <button class="mettran" id="Ni" type="button" onclick="alert(' ~28---Niquel---58.6934---2, 3, 4---metales de transicion~ ')">
+        <H1>Ni</H1>
+        <H5>Niquel</H5>
+    </button>
+    <button class="mettran" id="Pd" type="button" onclick="alert(' ~46---Paladio---106.42---2, 4---metales de transicion~ ')">
+        <H1>Pd</H1>
+        <H5>Paladio</H5>
+    </button>
+    <button class="mettran" id="Pt" type="button" onclick="alert(' ~78---Platino---195078---2, 4, 5, 6---metales de transicion~ ')">
+        <H1>Pt</H1>
+        <H5>Platino</H5>
+    </button>
+    <button class="mettran" id="Ds" type="button" onclick="alert(' ~110---Darmstadio---(281)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Ds</H1>
+        <H5>Darmstadio</H5>
+    </button>
+    <button class="mettran" id="Cu" type="button" onclick="alert(' ~29---Cobre---63.546---1, 2, 3---metales de transicion~ ')">
+        <H1>Cu</H1>
+        <H5>Cobre</H5>
+    </button>
+    <button class="mettran" id="Ag" type="button" onclick="alert(' ~47---Plata---107.8682---1, 2---metales de transicion~ ')">
+        <H1>Ag</H1>
+        <H5>Plata</H5>
+    </button>
+    <button class="mettran" id="Au" type="button" onclick="alert(' ~79---Oro---196.9665---1, 3---metales de transicion~ ')">
+        <H1>Au</H1>
+        <H5>Oro</H5>
+    </button>
+    <button class="mettran" id="Rg" type="button" onclick="alert(' ~111---Roentgenio---(280)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Rg</H1>
+        <H5>Roentgenio</H5>
+    </button>
+    <button class="mettran" id="Zn" type="button" onclick="alert(' ~30---Zinc---65.409---2---metales de transicion~ ')">
+        <H1>Zn</H1>
+        <H5>Zinc</H5>
+    </button>
+    <button class="mettran" id="Cd" type="button" onclick="alert(' ~48---Cadmio---112.411---2---metales de transicion~ ')">
+        <H1>Cd</H1>
+        <H5>Cadmio</H5>
+    </button>
+    <button class="mettran" id="Hg" type="button" onclick="alert(' ~80---Mercurio---200.59---1, 2---metales de transicion~ ')">
+        <H1>Hg</H1>
+        <H5>Mercurio</H5>
+    </button>
+    <button class="mettran" id="Cn" type="button" onclick="alert(' ~112---Copernicio---(285)---solo se conocen isotopos inestables---metales de transicion~ ')">
+        <H1>Cn</H1>
+        <H5>Copernecio</H5>
+    </button>
+    <button class="boro" id="B" type="button" onclick="alert(' ~5---Boro---10.811---+3, -3---no metales~ ')">
+        <H1>B</H1>
+        <H5>Boro</H5>
+    </button>
+    <button class="metalc" id="Al" type="button" onclick="alert(' ~13---Aluminio---26.96153---3---no metales~ ')">
+        <H1>Al</H1>
+        <H5>Aluminio</H5>
+    </button>
+    <button class="metalc" id="Ga" type="button" onclick="alert(' ~31---Galio---69.723---1, 3---no metales~ ')">
+        <H1>Ga</H1>
+        <H5>Galio</H5>
+    </button>
+    <button class="metalc" id="In" type="button" onclick="alert(' ~49---Indio---114.818---1, 3---no metales~ ')">
+        <H1>In</H1>
+        <H5>Indio</H5>
+    </button>
+    <button class="metalc" id="Tl" type="button" onclick="alert(' ~81---Talio---204.3833---1, 3---no metales~ ')">
+        <H1>Tl</H1>
+        <H5>Talio</H5>
+    </button>
+    <button class="mettran" id="Nh" type="button" onclick="alert(' ~113---Nihonio---(286)---solo se conocen isotopos inestables---no metales~ ')">
+        <H1>Nh</H1>
+        <H5>Nihonio</H5>
+    </button>
+    <button class="Carb" id="C" type="button" onclick="alert(' ~6---Carbono---12.0107---2, +4, -4---no metales~ ')">
+        <H1>C</H1>
+        <H5>Carbono</H5>
+    </button>
+    <button class="boro" id="Si" type="button" onclick="alert(' ~14---Silicio---28.0855---2, +4, -4---no metales~ ')">
+        <H1>Si</H1>
+        <H5>Silicio</H5>
+    </button>
+    <button class="boro" id="Ge" type="button" onclick="alert(' ~32---Germanio---72.61---2, 4---no metales~ ')">
+        <H1>Ge</H1>
+        <H5>Germanio</H5>
+    </button>
+    <button class="metalc" id="Sn" type="button" onclick="alert(' ~50---Estaño---118.71---2, 4---no metales~ ')">
+        <H1>Sn</H1>
+        <H5>Estaño</H5>
+    </button>
+    <button class="metalc" id="Pb" type="button" onclick="alert(' ~82---Plomo---207.2---2, 4---no metales~ ')">
+        <H1>Pb</H1>
+        <H5>Plomo</H5>
+    </button>
+    <button class="mettran" id="Fl" type="button" onclick="alert(' ~114---Flerovio---(289)---solo se conocen isotopos inestables---no metales~ ')">
+        <H1>Fl</H1>
+        <H5>Flerovio</H5>
+    </button>
+    <button class="Carb" id="N" type="button" onclick="alert(' ~7---Nitrógeno---14.0067---+1, -1, +2, -2, +3, -3, 4, 5---no metales~ ')">
+        <H1>N</H1>
+        <H5>Nitrógeno</H5>
+    </button>
+    <button class="Carb" id="P" type="button" onclick="alert(' ~15---Fósforo---30.97376---+3, -3, 5---no metales~ ')">
+        <H1>P</H1>
+        <H5>Fósforo</H5>
+    </button>
+    <button class="boro" id="As" type="button" onclick="alert(' ~32---Arsénico---74.9216---+3, -3, 5---no metales~ ')">
+        <H1>As</H1>
+        <H5>Arsénico</H5>
+    </button>
+    <button class="boro" id="Sb" type="button" onclick="alert(' ~51---Antimonio---121.76---+3, -3, 4, 5---no metales~ ')">
+        <H1>Sb</H1>
+        <H5>Antimonio</H5>
+    </button>
+    <button class="metalc" id="Bi" type="button" onclick="alert(' ~83---Bismuto---209.98038---2, +3, -3, 5---no metales~ ')">
+        <H1>Bi</H1>
+        <H5>Bismuto</H5>
+    </button>
+    <button class="mettran" id="Mc" type="button" onclick="alert(' ~115---Moscovio---(289)---solo se conocen isotopos inestables---no metales~ ')">
+        <H1>Mc</H1>
+        <H5>Moscovio</H5>
+    </button>
+    <button class="Carb" id="O" type="button" onclick="alert(' ~8---Oxígeno---15.9994---+2, -2, -1---no metales~ ')">
+        <H1>O</H1>
+        <H5>Oxígeno</H5>
+    </button>
+    <button class="Carb" id="S" type="button" onclick="alert(' ~16---Azufre---32.065---+1, -1, 3, 4, 5---no metales~ ')">
+        <H1>S</H1>
+        <H5>Azufre</H5>
+    </button>
+    <button class="Carb" id="Se" type="button" onclick="alert(' ~34---Selenio---78.96---+2, -2, 4, 6---no metales~ ')">
+        <H1>Se</H1>
+        <H5>Selenio</H5>
+    </button>
+    <button class="boro" id="Te" type="button" onclick="alert(' ~52---Telurio---127.60---1, +2, -2, 4, 6---no metales~ ')">
+        <H1>Te</H1>
+        <H5>Telurio</H5>
+    </button>
+    <button class="metalc" id="Po" type="button" onclick="alert(' ~84---Polonio---(208.9824)---+2, -2, 4, 6---no metales~ ')">
+        <H1>Po</H1>
+        <H5>Polonio</H5>
+    </button>
+    <button class="mettran" id="Lv" type="button" onclick="alert(' ~116---Livermonio---(293)---solo se conocen isotopos inestables---no metales~ ')">
+        <H1>Lv</H1>
+        <H5>Livermonio</H5>
+    </button>
+    <button class="Carb" id="F" type="button" onclick="alert(' ~9---Flúor---18.998403----1---no metales~ ')">
+        <H1>F</H1>
+        <H5>Flúor</H5>
+    </button>
+    <button class="Carb" id="Cl" type="button" onclick="alert(' ~17---Cloro---35.453---+1, -1, 3, 4, 5, 7---no metales~ ')">
+        <H1>Cl</H1>
+        <H5>Cloro</H5>
+    </button>
+    <button class="Carb" id="Br" type="button" onclick="alert(' ~35---Bromo---79.904---+1, -1, 3, 4, 5---no metales~ ')">
+        <H1>Br</H1>
+        <H5>Bromo</H5>
+    </button>
+    <button class="Carb" id="I" type="button" onclick="alert(' ~53---Yodo---126.9044---+1, -1. 3, 4, 5, 7---no metales~ ')">
+        <H1>I</H1>
+        <H5>Yodo</H5>
+    </button>
+    <button class="Carb" id="At" type="button" onclick="alert(' ~85---Ástato---(209.9871)---+1, -1, 3, 5, 7---no metales~ ')">
+        <H1>At</H1>
+        <H5>Ástato</H5>
+    </button>
+    <button class="mettran" id="Ts" type="button" onclick="alert(' ~117---Téneso---(294)---solo se conocen isotopos inestables---no metales~ ')">
+        <H1>Ts</H1>
+        <H5>Téneso</H5>
+    </button>
+    <button class="gasn" id="He" type="button" onclick="alert(' ~2---Helio---4.002602---0---gases nobles~ ')">
+        <H1>He</H1>
+        <H5>Helio</H5>
+    </button>
+    <button class="gasn" id="Ne" type="button" onclick="alert(' ~10---Neón---20.1797---0---gases nobles~ ')">
+        <H1>Ne</H1>
+        <H5>Neón</H5>
+    </button>
+    <button class="gasn" id="Ar" type="button" onclick="alert(' ~18---Argón---39.948---0---gases nobles~ ')">
+        <H1>Ar</H1>
+        <H5>Argón</H5>
+    </button>
+    <button class="gasn" id="Kr" type="button" onclick="alert(' ~36---Kriptón---83.798---0, 2---gases nobles~ ')">
+        <H1>Kr</H1>
+        <H5>Kriptón</H5>
+    </button>
+    <button class="gasn" id="Xe" type="button" onclick="alert(' ~54---Xenón---131.293---0, 2, 4, 6, 8---gases nobles~ ')">
+        <H1>Xe</H1>
+        <H5>Xenón</H5>
+    </button>
+    <button class="gasn" id="Rn" type="button" onclick="alert(' ~86---Radón---(222.0176)---0, 2---gases nobles~ ')">
+        <H1>Rn</H1>
+        <H5>Radón</H5>
+    </button>
+    <button class="mettran" id="Og" type="button" onclick="alert(' ~118---Oganesón---(294.0176)---0, 2---gases nobles~ ')">
+        <H1>Og</H1>
+        <H5>Oganesón</H5>
+    </button>
+    <button class="lan" id="La-Lu" type="button" onclick="alert(' ~LANTÁNIDOS~ ')">
+        <H3>La-Lu</H3>
+        <H5></H5>
+    </button>
+    <button class="lan" id="La" type="button" onclick="alert(' ~57---Lantano---138.9055---3---lantánidos~ ')">
+        <H1>La</H1>
+        <H5>Lantano</H5>
+    </button>
+    <button class="lan" id="Ce" type="button" onclick="alert(' ~58---Cerio---14.116---2, 3, 4---lantánidos~ ')">
+        <H1>Ce</H1>
+        <H5>Cerio</H5>
+    </button>
+    <button class="lan" id="Pr" type="button" onclick="alert(' ~59---Praseodimio---140.9076---2, 3, 4---lantánidos~ ')">
+        <H1>Pr</H1>
+        <H5>Praseodimio</H5>
+    </button>
+    <button class="lan" id="Nd" type="button" onclick="alert(' ~60---Neodimio---144.24---3---lantánidos~ ')">
+        <H1>Nd</H1>
+        <H5>Neodimio</H5>
+    </button>
+    <button class="lan" id="Pm" type="button" onclick="alert(' ~61---Prometio---(144.9127)---3---lantánidos~ ')">
+        <H1>Pm</H1>
+        <H5>Prometio</H5>
+    </button>
+    <button class="lan" id="Sm" type="button" onclick="alert(' ~62---Samario---150.36---2, 3---lantánidos~ ')">
+        <H1>Sm</H1>
+        <H5>Samario</H5>
+    </button>
+    <button class="lan" id="Eu" type="button" onclick="alert(' ~63---Europio---151.964---2, 3---lantánidos~ ')">
+        <H1>Eu</H1>
+        <H5>Europio</H5>
+    </button>
+    <button class="lan" id="Gd" type="button" onclick="alert(' ~64---Gadolinio---157.25---2,3---lantánidos~ ')">
+        <H1>Gd</H1>
+        <H5>Gadolinio</H5>
+    </button>
+    <button class="lan" id="Tb" type="button" onclick="alert(' ~65---Terbio---158.9253---3,4 ---lantánidos~ ')">
+        <H1>Tb</H1>
+        <H5>Terbio</H5>
+    </button>
+    <button class="lan" id="Dy" type="button" onclick="alert(' ~66---Disprosio---162.50---2, 3, 4---lantánidos~ ')">
+        <H1>Dy</H1>
+        <H5>Disprosio</H5>
+    </button>
+    <button class="lan" id="Ho" type="button" onclick="alert(' ~67---Hosmio---164.9303---3---lantánidos~ ')">
+        <H1>Ho</H1>
+        <H5>Hosmio</H5>
+    </button>
+    <button class="lan" id="Er" type="button" onclick="alert(' ~68---Erbio---167.259---3---lantánidos~ ')">
+        <H1>Er</H1>
+        <H5>Erbio</H5>
+    </button>
+    <button class="lan" id="Tm" type="button" onclick="alert(' ~69---Tulio---168.9342---2, 3---lantánidos~ ')">
+        <H1>Tm</H1>
+        <H5>Tulio</H5>
+    </button>
+    <button class="lan" id="Yb" type="button" onclick="alert(' ~70---Iterbio---173.04---2, 3---lantánidos~ ')">
+        <H1>Yn</H1>
+        <H5>Iterbio</H5>
+    </button>
+    <button class="lan" id="Lu" type="button" onclick="alert(' ~71---Lutecio---174.967---3---lantánidos~ ')">
+        <H1>Lu</H1>
+        <H5>Lutecio</H5>
+    </button>
+    <button class="Act" id="Ac-Lr" type="button" onclick="alert(' ~ACTÍNIDOS~ ')">
+        <H3>Ac-Lr</H3>
+        <H5></H5>
+    </button>
+    <button class="Act" id="Ac" type="button" onclick="alert(' ~89---Actinio---(227.0277)---2, 3---Actínidos~ ')">
+        <H1>Ac</H1>
+        <H5>Actinio</H5>
+    </button>
+    <button class="Act" id="Th" type="button" onclick="alert(' ~90---Torio---232.0381---2, 3, 4---Actínidos~ ')">
+        <H1>Th</H1>
+        <H5>Torio</H5>
+    </button>
+    <button class="Act" id="Pa" type="button" onclick="alert(' ~91---Protactinio---231.03588---3, 4, 5---Actínidos~ ')">
+        <H1>Pa</H1>
+        <H5>Protactinio</H5>
+    </button>
+    <button class="Act" id="U" type="button" onclick="alert(' ~92---Uranio---238.0289---3, 4, 5, 6---Actínidos~ ')">
+        <H1>U</H1>
+        <H5>Uranio</H5>
+    </button>
+    <button class="Act" id="Np" type="button" onclick="alert(' ~93---Neptunio---(237.0482)---2, 3, 4, 5, 6---Actínidos~ ')">
+        <H1>Np</H1>
+        <H5>Neptunio</H5>
+    </button>
+    <button class="Act" id="Pu" type="button" onclick="alert(' ~94---Plutonio---(244.0642)---2, 3, 4, 5, 6, 7---Actínidos~ ')">
+        <H1>Pu</H1>
+        <H5>Plutonio</H5>
+    </button>
+    <button class="Act" id="Am" type="button" onclick="alert(' ~95---Americio---(243.0614)---2, 3, 4, 5, 6---Actínidos~ ')">
+        <H1>Am</H1>
+        <H5>Americio</H5>
+    </button>
+    <button class="Act" id="Cm" type="button" onclick="alert(' ~96---Curio---(247.0704)---2, 3, 4---Actínidos~ ')">
+        <H1>Cm</H1>
+        <H5>Curio</H5>
+    </button>
+    <button class="Act" id="Bk" type="button" onclick="alert(' ~97---Berquelio---(247.0703)---2, 3, 4---Actínidos~ ')">
+        <H1>Bk</H1>
+        <H5>Berquelio</H5>
+    </button>
+    <button class="Act" id="Cf" type="button" onclick="alert(' ~98---Californio---(251.0796)---2, 3, 4---Actínidos~ ')">
+        <H1>Cf</H1>
+        <H5>Californio</H5>
+    </button>
+    <button class="Act" id="Es" type="button" onclick="alert(' ~99---Einstenio---(252.0830)---2, 3---Actínidos~ ')">
+        <H1>Es</H1>
+        <H5>Einstenio</H5>
+    </button>
+    <button class="Act" id="Fm" type="button" onclick="alert(' ~100---Fermio---(257.0951)---2, 3---Actínidos~ ')">
+        <H1>Fm</H1>
+        <H5>Fermio</H5>
+    </button>
+    <button class="Act" id="Md" type="button" onclick="alert(' ~101---Mendelevio---(258.0951)---2, 3---Actínidos~ ')">
+        <H1>Md</H1>
+        <H5>Mendelevio</H5>
+    </button>
+    <button class="Act" id="No" type="button" onclick="alert(' ~102---Nobelio---(259.1010)---2, 3---Actínidos~ ')">
+        <H1>No</H1>
+        <H5>Nobelio</H5>
+    </button>
+    <button class="Act" id="Lr" type="button" onclick="alert(' ~103---Laurencio---(262.1097)---solo se conocen isótopos inestables---Actínidos~ ')">
+        <H1>Lr</H1>
+        <H5>Laurencio</H5>
+    </button>
+</body>
+</html>
